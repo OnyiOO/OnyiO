@@ -20,15 +20,23 @@
   <!-- HERO -->
   <header class="hero fade-in">
     <div class="hero-content">
-      <h1>Onyinyechi Obiakonwa</h1>
+      <h1 class="glow-name">Onyinyechi Obiakonwa</h1>
       <p>Electrical Engineering Student · Signals · Circuits · Systems</p>
-      <a href="#projects" class="btn-primary">Explore My Work</a>
+
+      <!-- Resume Button -->
+      <a href="resume.pdf" target="_blank" class="btn-primary">
+        View My Resume
+      </a>
     </div>
   </header>
+
+  <!-- Wave Divider -->
+  <div class="wave-divider"></div>
 
   <!-- NAVBAR -->
   <nav class="navbar">
     <a href="#about">About</a>
+    <a href="#current">Currently Working On</a>
     <a href="#projects">Projects</a>
     <a href="#skills">Skills</a>
     <a href="#contact">Contact</a>
@@ -44,18 +52,23 @@
         <img src="images/your-photo.jpg" alt="Your portrait" class="about-photo" />
 
         <div class="about-text">
-          <p>
-            <!-- Write your intro here -->
-          </p>
-          <p>
-            <!-- Add more details about your background -->
-          </p>
-          <p>
-            <!-- Add what you're passionate about or your goals -->
-          </p>
+          <p><!-- Intro --></p>
+          <p><!-- Background --></p>
+          <p><!-- Goals --></p>
         </div>
       </div>
     </section>
+
+    <!-- CURRENTLY WORKING ON -->
+    <section id="current" class="section fade-in">
+      <h2>Currently Working On</h2>
+      <div class="current-box">
+        <p><!-- Add your current project or class here --></p>
+      </div>
+    </section>
+
+    <!-- Wave Divider -->
+    <div class="wave-divider flip"></div>
 
     <!-- PROJECTS -->
     <section id="projects" class="section fade-in">
@@ -65,7 +78,7 @@
         <img src="images/fall2024.jpg" alt="Fall 2024 project preview" />
         <div>
           <h3>Fall 2024</h3>
-          <p><!-- Describe your Fall 2024 project here --></p>
+          <p><!-- Description --></p>
         </div>
       </div>
 
@@ -73,7 +86,7 @@
         <img src="images/spring2025.jpg" alt="Spring 2025 project preview" />
         <div>
           <h3>Spring 2025</h3>
-          <p><!-- Describe your Spring 2025 project here --></p>
+          <p><!-- Description --></p>
         </div>
       </div>
 
@@ -81,7 +94,7 @@
         <img src="images/fall2025.jpg" alt="Fall 2025 project preview" />
         <div>
           <h3>Fall 2025</h3>
-          <p><!-- Describe your Fall 2025 project here --></p>
+          <p><!-- Description --></p>
         </div>
       </div>
 
@@ -89,7 +102,7 @@
         <img src="images/spring2026.jpg" alt="Spring 2026 project preview" />
         <div>
           <h3>Spring 2026</h3>
-          <p><!-- Describe your Spring 2026 project here --></p>
+          <p><!-- Description --></p>
         </div>
       </div>
     </section>
@@ -164,6 +177,17 @@
     }, appearOptions);
 
     faders.forEach(fader => appearOnScroll.observe(fader));
+  </script>
+
+  <!-- Parallax Orbs -->
+  <script>
+    document.addEventListener("mousemove", (e) => {
+      const x = (e.clientX / window.innerWidth - 0.5) * 30;
+      const y = (e.clientY / window.innerHeight - 0.5) * 30;
+
+      document.querySelector(".orb1").style.transform = `translate(${x}px, ${y}px)`;
+      document.querySelector(".orb2").style.transform = `translate(${-x}px, ${-y}px)`;
+    });
   </script>
 
 </body>
