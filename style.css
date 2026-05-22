@@ -317,6 +317,62 @@ main {
 }
 
 /* -----------------------------------
+   MODAL (Resume Popup)
+----------------------------------- */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 20;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(5, 8, 20, 0.7);
+  backdrop-filter: blur(6px);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: rgba(13, 19, 48, 0.95);
+  border: 1px solid rgba(216, 200, 255, 0.5);
+  border-radius: var(--radius);
+  width: 80%;
+  max-width: 900px;
+  height: 85%;
+  padding: 1rem;
+  box-shadow: 0 0 40px rgba(216, 200, 255, 0.5);
+  position: relative;
+  animation: modalFade 0.4s ease;
+}
+
+.modal-content iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 10px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 18px;
+  font-size: 28px;
+  color: var(--lavender-bright);
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.close:hover {
+  color: var(--silver);
+}
+
+@keyframes modalFade {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* -----------------------------------
    FADE-IN ANIMATION
 ----------------------------------- */
 .fade-in {
@@ -337,5 +393,10 @@ main {
   .project-card,
   .about-wrapper {
     grid-template-columns: 1fr;
+  }
+
+  .modal-content {
+    width: 95%;
+    height: 90%;
   }
 }
