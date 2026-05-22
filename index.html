@@ -9,19 +9,24 @@
 
 <body>
 
-  <!-- Sparkle Animation Layer -->
+  <!-- Background Animation Layers -->
+  <div class="gradient-bg"></div>
+  <div class="orb orb1"></div>
+  <div class="orb orb2"></div>
+
+  <!-- Sparkles -->
   <div class="sparkle-container"></div>
 
-  <!-- Hero Section -->
-  <header class="hero">
+  <!-- HERO -->
+  <header class="hero fade-in">
     <div class="hero-content">
       <h1>Onyinyechi Obiakonwa</h1>
-      <p>Electrical Engineering Student · Projects, Signals, and Systems</p>
-      <a href="#projects" class="btn-primary">View My Projects</a>
+      <p>Electrical Engineering Student · Signals · Circuits · Systems</p>
+      <a href="#projects" class="btn-primary">Explore My Work</a>
     </div>
   </header>
 
-  <!-- Navigation -->
+  <!-- NAVBAR -->
   <nav class="navbar">
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
@@ -31,8 +36,8 @@
 
   <main>
 
-    <!-- ABOUT ME SECTION -->
-    <section id="about" class="section about-section">
+    <!-- ABOUT -->
+    <section id="about" class="section fade-in">
       <h2>About Me</h2>
 
       <div class="about-wrapper">
@@ -52,17 +57,15 @@
       </div>
     </section>
 
-    <!-- PROJECTS SECTION -->
-    <section id="projects" class="section">
+    <!-- PROJECTS -->
+    <section id="projects" class="section fade-in">
       <h2>Projects</h2>
 
       <div class="project-card">
         <img src="images/fall2024.jpg" alt="Fall 2024 project preview" />
         <div>
           <h3>Fall 2024</h3>
-          <p>
-            <!-- Describe your Fall 2024 project here -->
-          </p>
+          <p><!-- Describe your Fall 2024 project here --></p>
         </div>
       </div>
 
@@ -70,9 +73,7 @@
         <img src="images/spring2025.jpg" alt="Spring 2025 project preview" />
         <div>
           <h3>Spring 2025</h3>
-          <p>
-            <!-- Describe your Spring 2025 project here -->
-          </p>
+          <p><!-- Describe your Spring 2025 project here --></p>
         </div>
       </div>
 
@@ -80,9 +81,7 @@
         <img src="images/fall2025.jpg" alt="Fall 2025 project preview" />
         <div>
           <h3>Fall 2025</h3>
-          <p>
-            <!-- Describe your Fall 2025 project here -->
-          </p>
+          <p><!-- Describe your Fall 2025 project here --></p>
         </div>
       </div>
 
@@ -90,15 +89,13 @@
         <img src="images/spring2026.jpg" alt="Spring 2026 project preview" />
         <div>
           <h3>Spring 2026</h3>
-          <p>
-            <!-- Describe your Spring 2026 project here -->
-          </p>
+          <p><!-- Describe your Spring 2026 project here --></p>
         </div>
       </div>
     </section>
 
-    <!-- SKILLS SECTION -->
-    <section id="skills" class="section">
+    <!-- SKILLS -->
+    <section id="skills" class="section fade-in">
       <h2>Skills</h2>
       <ul class="pill-list">
         <li>Signals & Systems</li>
@@ -109,8 +106,8 @@
       </ul>
     </section>
 
-    <!-- CONTACT SECTION -->
-    <section id="contact" class="section">
+    <!-- CONTACT -->
+    <section id="contact" class="section fade-in">
       <h2>Contact</h2>
       <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
       <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
@@ -120,7 +117,7 @@
   </main>
 
   <!-- FOOTER -->
-  <footer class="footer">
+  <footer class="footer fade-in">
     <p>© <span id="year"></span> Onyinyechi Obiakonwa</p>
   </footer>
 
@@ -129,7 +126,7 @@
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 
-  <!-- Sparkle Animation Script -->
+  <!-- Sparkle Script -->
   <script>
     const container = document.querySelector('.sparkle-container');
 
@@ -147,6 +144,26 @@
     }
 
     setInterval(createSparkle, 200);
+  </script>
+
+  <!-- Fade-in on scroll -->
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+
+    const appearOptions = {
+      threshold: 0.2,
+      rootMargin: "0px 0px -50px 0px"
+    };
+
+    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => appearOnScroll.observe(fader));
   </script>
 
 </body>
