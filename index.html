@@ -6,7 +6,13 @@
   <title>Onyinyechi Obiakonwa | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
+
+  <!-- Sparkle Animation Layer -->
+  <div class="sparkle-container"></div>
+
+  <!-- Hero Section -->
   <header class="hero">
     <div class="hero-content">
       <h1>Onyinyechi Obiakonwa</h1>
@@ -15,6 +21,7 @@
     </div>
   </header>
 
+  <!-- Navigation -->
   <nav class="navbar">
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
@@ -23,46 +30,74 @@
   </nav>
 
   <main>
-    <section id="about" class="section">
+
+    <!-- ABOUT ME SECTION -->
+    <section id="about" class="section about-section">
       <h2>About Me</h2>
-      <p>
-        I’m an Electrical Engineering student with experience in signals and systems,
-        circuits, and thermodynamics. I enjoy connecting theory to real-world systems
-        and building projects that are both rigorous and practical.
-      </p>
+
+      <div class="about-wrapper">
+        <img src="images/your-photo.jpg" alt="Your portrait" class="about-photo" />
+
+        <div class="about-text">
+          <p>
+            <!-- Write your intro here -->
+          </p>
+          <p>
+            <!-- Add more details about your background -->
+          </p>
+          <p>
+            <!-- Add what you're passionate about or your goals -->
+          </p>
+        </div>
+      </div>
     </section>
 
+    <!-- PROJECTS SECTION -->
     <section id="projects" class="section">
       <h2>Projects</h2>
 
       <div class="project-card">
-        <img src="images/pedalpic1.png" alt="Project 1 preview" />
+        <img src="images/fall2024.jpg" alt="Fall 2024 project preview" />
         <div>
-          <h3>Project Title 1</h3>
+          <h3>Fall 2024</h3>
           <p>
-            Short description of what the project does, what tools you used,
-            and what problem it solves.
+            <!-- Describe your Fall 2024 project here -->
           </p>
-          <a href="https://github.com/yourusername/project1" target="_blank">
-            View on GitHub
-          </a>
         </div>
       </div>
 
       <div class="project-card">
-        <img src="images/pedalpic2.png" alt="Project 2 preview" />
+        <img src="images/spring2025.jpg" alt="Spring 2025 project preview" />
         <div>
-          <h3>Project Title 2</h3>
+          <h3>Spring 2025</h3>
           <p>
-            Another concise description. Focus on impact, your role, and technologies.
+            <!-- Describe your Spring 2025 project here -->
           </p>
-          <a href="https://github.com/yourusername/project2" target="_blank">
-            View on GitHub
-          </a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="images/fall2025.jpg" alt="Fall 2025 project preview" />
+        <div>
+          <h3>Fall 2025</h3>
+          <p>
+            <!-- Describe your Fall 2025 project here -->
+          </p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="images/spring2026.jpg" alt="Spring 2026 project preview" />
+        <div>
+          <h3>Spring 2026</h3>
+          <p>
+            <!-- Describe your Spring 2026 project here -->
+          </p>
         </div>
       </div>
     </section>
 
+    <!-- SKILLS SECTION -->
     <section id="skills" class="section">
       <h2>Skills</h2>
       <ul class="pill-list">
@@ -74,21 +109,45 @@
       </ul>
     </section>
 
+    <!-- CONTACT SECTION -->
     <section id="contact" class="section">
       <h2>Contact</h2>
       <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
       <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
       <p>LinkedIn: <a href="https://www.linkedin.com/in/your-link" target="_blank">Your LinkedIn</a></p>
     </section>
+
   </main>
 
+  <!-- FOOTER -->
   <footer class="footer">
     <p>© <span id="year"></span> Onyinyechi Obiakonwa</p>
   </footer>
 
+  <!-- Footer Year Script -->
   <script>
-    // Set current year in footer
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+
+  <!-- Sparkle Animation Script -->
+  <script>
+    const container = document.querySelector('.sparkle-container');
+
+    function createSparkle() {
+      const sparkle = document.createElement('div');
+      sparkle.classList.add('sparkle');
+
+      sparkle.style.left = Math.random() * 100 + 'vw';
+      sparkle.style.animationDuration = 3 + Math.random() * 3 + 's';
+      sparkle.style.opacity = Math.random();
+
+      container.appendChild(sparkle);
+
+      setTimeout(() => sparkle.remove(), 6000);
+    }
+
+    setInterval(createSparkle, 200);
+  </script>
+
 </body>
 </html>
