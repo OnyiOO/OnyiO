@@ -23,19 +23,18 @@
       <h1 class="glow-name">Onyinyechi Obiakonwa</h1>
       <p>Electrical Engineering Student · Signals · Circuits · Systems</p>
 
-      <!-- Resume Modal Trigger -->
-      <button class="btn-primary" id="resumeBtn">View My Resume</button>
+      <!-- Clean Resume Button -->
+      <a href="resume.pdf" target="_blank" class="btn-primary">View My Resume</a>
     </div>
   </header>
 
-  <!-- Glowing Divider -->
   <div class="glow-divider"></div>
 
   <!-- NAVBAR -->
   <nav class="navbar">
     <a href="#about">About</a>
     <a href="#current">Currently Working On</a>
-    <a href="#projects">Projects</a>
+    <a href="#highlights">Project Highlights</a>
     <a href="#skills">Skills</a>
     <a href="#contact">Contact</a>
   </nav>
@@ -65,12 +64,11 @@
       </div>
     </section>
 
-    <!-- Glowing Divider -->
     <div class="glow-divider"></div>
 
-    <!-- PROJECTS -->
-    <section id="projects" class="section fade-in">
-      <h2>Projects</h2>
+    <!-- PROJECT HIGHLIGHTS -->
+    <section id="highlights" class="section fade-in">
+      <h2>Project Highlights</h2>
 
       <div class="project-card">
         <img src="images/fall2024.jpg" alt="Fall 2024 project preview" />
@@ -105,6 +103,8 @@
       </div>
     </section>
 
+    <div class="glow-divider"></div>
+
     <!-- SKILLS -->
     <section id="skills" class="section fade-in">
       <h2>Skills</h2>
@@ -116,6 +116,8 @@
         <li>Thermodynamics & Heat Transfer</li>
       </ul>
     </section>
+
+    <div class="glow-divider"></div>
 
     <!-- CONTACT -->
     <section id="contact" class="section fade-in">
@@ -131,14 +133,6 @@
   <footer class="footer fade-in">
     <p>© <span id="year"></span> Onyinyechi Obiakonwa</p>
   </footer>
-
-  <!-- Resume Modal -->
-  <div id="resumeModal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <iframe src="resume.pdf"></iframe>
-    </div>
-  </div>
 
   <!-- Footer Year Script -->
   <script>
@@ -194,17 +188,6 @@
       document.querySelector(".orb1").style.transform = `translate(${x}px, ${y}px)`;
       document.querySelector(".orb2").style.transform = `translate(${-x}px, ${-y}px)`;
     });
-  </script>
-
-  <!-- Resume Modal Script -->
-  <script>
-    const modal = document.getElementById("resumeModal");
-    const btn = document.getElementById("resumeBtn");
-    const closeBtn = document.querySelector(".close");
-
-    btn.onclick = () => modal.style.display = "flex";
-    closeBtn.onclick = () => modal.style.display = "none";
-    window.onclick = (e) => { if (e.target === modal) modal.style.display = "none"; };
   </script>
 
 </body>
