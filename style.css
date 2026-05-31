@@ -390,13 +390,14 @@ main {
    RESPONSIVE
 ----------------------------------- */
 @media (max-width: 700px) {
-  .project-card,
-  .about-wrapper {
-    grid-template-columns: 1fr;
+  .navbar {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    padding: 0.75rem 0.5rem;
   }
 
-  .modal-content {
-    width: 95%;
-    height: 90%;
+  .navbar a {
+    font-size: 0.85rem;
+    padding: 0.3rem 0.5rem;
   }
 }
