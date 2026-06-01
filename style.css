@@ -415,6 +415,13 @@ main {
   max-width: 700px;
   line-height: 1.6;
 }
+.project-gif {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 14px;
+  display: block;
+  margin: 1rem auto;
+}
 
 /* -----------------------------------
    RESPONSIVE
