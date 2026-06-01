@@ -405,6 +405,16 @@ main {
   display: block;
   margin: 1rem auto;
 }
+.project-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.project-card p {
+  max-width: 700px;
+  line-height: 1.6;
+}
 
 /* -----------------------------------
    RESPONSIVE
