@@ -369,9 +369,9 @@ main {
    FADE-IN ANIMATION
 ----------------------------------- */
 .fade-in {
-  opacity: 0;
+  opacity: 1;
   transform: translateY(12px);
-  transition: opacity 0.55s ease-out, transform 0.55s ease-out;
+  transition: none;
 }
 
 .fade-in.visible {
