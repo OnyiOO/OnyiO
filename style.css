@@ -462,11 +462,19 @@ main {
     text-align: center;
   }
 .project-card {
+    display: flex;
+    flex-direction: column;
     padding: 1.2rem;
+    gap: 1.2rem;
+  }
+   .project-text {
+    max-width: 100%;
+    text-align: left;
   }
 
-  .media-grid img,
-  .media-grid video {
+   .media-grid img,
+  .media-grid video,
+  .project-gif {
     max-width: 100%;
   }
   .about-photo {
