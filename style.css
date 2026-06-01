@@ -398,6 +398,13 @@ main {
   border-radius: 14px;
   box-shadow: 0 0 30px rgba(216, 200, 255, 0.4);
 }
+.current-photo {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 14px;
+  display: block;
+  margin: 1rem auto;
+}
 
 /* -----------------------------------
    RESPONSIVE
