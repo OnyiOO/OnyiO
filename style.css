@@ -386,6 +386,19 @@ main {
   transform: translateY(0);
 }
 
+.media-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.project-video {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 14px;
+  box-shadow: 0 0 30px rgba(216, 200, 255, 0.4);
+}
+
 /* -----------------------------------
    RESPONSIVE
 ----------------------------------- */
